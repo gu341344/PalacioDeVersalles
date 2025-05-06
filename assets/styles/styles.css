@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(-45deg, #e0f2fe, #fef9c3, #fde68a, #e0f2fe);
+    background-size: 400% 400%;
+    animation: gradientBG 20s ease infinite;
+  }
+  
+  .animated-bg {
+    background: linear-gradient(-45deg, #f9fafb, #fef3c7, #e0f2fe, #fce7f3);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    opacity: 0.7;
+  }
+  
+  @keyframes gradientShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+
+  
+  details[open] summary ~ * {
+  animation: fadeInUp 0.5s ease-in-out;
+  transition: all 0.4s ease;
+  transform: scale(1.02);
+}
+
+summary {
+  transition: font-size 0.3s ease;
+  cursor: pointer;
+}
+
+details[open] > summary {
+  font-size: 1.3rem;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+body {
+  background: linear-gradient(-45deg, #e0f2fe, #fef9c3, #fde68a, #e0f2fe);
+  background-size: 400% 400%;
+  animation: gradientBG 20s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#heroText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-hidden {
+  opacity: 0;
+  transform: translateY(-100px);
+}
